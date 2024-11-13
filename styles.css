@@ -1,0 +1,584 @@
+*{
+  background-color: rgb(255, 231, 246);
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+h1{
+    font-family: 'my_valentine_-_personal_useRg', Arial, Helvetica, sans-serif;
+font-style:normal;
+}
+
+.font{
+  position: relative;
+   margin: auto;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items:center;  
+    margin: auto;
+  
+  }
+  .navbartop{
+    position: relative;
+    z-index: 2; /* Add this line */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .navbartop li{
+    display:inline-block;
+    margin: auto;
+    list-style: none;
+    
+  }
+
+  .navbartop a{
+    text-decoration:none;
+    font-size:20px;
+  }
+
+  .nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  margin: 3px 0;
+}
+
+.burger-menu .line {
+  background-color: black; /* Add this line to change the color to black */
+}
+
+@media screen and (max-width: 768px) {
+  .burger-menu {
+      display: flex;
+  }
+
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
+      position: absolute;
+      top: 60px;
+      left: 0;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+}
+
+
+  .wrapper{
+    font-family: 'Bodoni Moda', serif;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    text-align: center;
+    padding-top: 70px;
+  }
+
+  span{
+    color: rgb(0, 0, 0);
+    font-size: 60px;
+    font-weight: 500;
+    letter-spacing: 1px;
+  }
+
+
+  .multiText{
+    color: rgb(13, 5, 124);
+    font-weight: 300;
+    text-transform: capitalize;
+  }
+
+  .social .bx{
+    font-size: 30px;
+    padding: 10px;
+    color: rgb(19, 18, 19);
+  }
+
+  .social .bx:hover {
+ color: rgb(104, 155, 138);
+    transition: 0.5s all linear;
+  }
+
+
+  .arr div {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    border-top: 4px solid rgb(0, 0, 0);
+    border-left: 4px solid rgb(0, 0, 0);
+    transform: rotate(45deg);
+    left: 50%; /* Center the arrow horizontally */
+    top: 50%; /* Center the arrow vertically */
+  }
+
+  @media screen and (max-width: 1750px) {
+    .arr div {
+      left: 50%; /* Center the arrow horizontally */
+      top: 60%; /* Adjust the position for smaller screens */
+    }
+  
+    .down {
+      transform: rotate(180deg);
+    }
+  }
+
+  .about{
+    position: relative;
+    top: 500%;
+    text-align:center;
+  }
+  .Education{
+    position: relative;
+    top: 700%;
+    text-align:center;
+  }
+  .Certfications{
+    position: relative;
+    top: 900%;
+    text-align:center;
+  }
+  .Projects{
+    position: relative;
+    text-align:center;
+  }
+
+  .classp{
+    position: relative;
+    margin: 0;
+    font: 1em/1.618 Inter, sans-serif;
+    background: none;
+    font-size: 45px;
+
+  }
+
+  .classp:not(:last-child) {
+    margin-bottom: 1.5em;
+  }
+
+  .card {
+    width: 220px;
+  height: 321px;
+  background: #fff;
+  border-top-right-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 14px 26px rgba(0,0,0,0.04);
+  transition: all 0.3s ease-out;
+  text-decoration: none;
+
+  margin: 5%;
+  }
+
+  .card:hover {
+    transform: translateY(-5px) scale(1.005) translateZ(0);
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+      0 24px 46px var(--box-shadow-color);
+  }
+
+  .card:hover .overlay {
+    transform: scale(4) translateZ(0);
+  }
+  
+  .card:hover .circle {
+    border-color: var(--bg-color-light);
+    background: var(--bg-color);
+  }
+  
+  .card:hover .circle:after {
+    background: var(--bg-color-light);
+  }
+  
+  .card:hover p {
+    color: var(--text-color-hover);
+  }
+  
+  .card:active {
+    transform: scale(1) translateZ(0);
+    box-shadow: 0 15px 24px rgba(0,0,0,0.11),
+      0 15px 24px var(--box-shadow-color);
+  }
+
+  .education {
+    --bg-color: #f5a1e3;
+    --bg-color-light: #fdbaff;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(255, 215, 97, 0.48);
+  }
+
+  .click {
+    --bg-color: #a1f5f5;
+    --bg-color-light: #4ec9e7;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(255, 215, 97, 0.48);
+  }
+  .where {
+    --bg-color: #a1f5c1;
+    --bg-color-light: #2af09e;
+    --text-color-hover: #4C5656;
+    --box-shadow-color: rgba(255, 215, 97, 0.48);
+  }
+
+  .card p {
+    font-size: 17px;
+    color: #4C5656;
+    margin-top: 30px;
+    z-index: 1000;
+    transition: color 0.3s ease-out;
+    background: none;
+  }
+
+  .circle {
+    width: 131px;
+    height: 131px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease-out;
+  }
+  
+  .circle:after {
+    content: "";
+    width: 118px;
+    height: 118px;
+    display: block;
+    position: absolute;
+    background: var(--bg-color);
+    border-radius: 50%;
+    top: 7px;
+    left: 7px;
+    transition: opacity 0.3s ease-out;
+  }
+  
+  .circle svg {
+    z-index: 10000;
+    transform: translateZ(0);
+  }
+  
+  .overlay {
+    width: 118px;
+    position: absolute; 
+    height: 118px;
+    border-radius: 50%;
+    background: var(--bg-color);
+    top: 70px;
+    left: 50px;
+    z-index: 0;
+    transition: transform 0.3s ease-out;
+  }
+
+  .flexbox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 50px 0;
+  }
+
+  .contactForm{
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for the form */
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .contactForm h2{
+    text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+    color: #555;
+  }
+
+  .contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .contactForm .inputBox input, 
+  .contactForm .inputBox textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #555;
+    outline: none;
+    resize: none;
+  }
+
+  .contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+    background: none;
+  }
+
+  .contactForm .inputBox input:focus ~ span,
+  .contactForm .inputBox input:valid ~ span,
+  .contactForm .inputBox textarea:focus ~ span,
+  .contactForm .inputBox textarea:valid ~ span
+  {
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+    background: none;
+ 
+  }
+
+  .contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+
+  }
+
+@media (max-width: 768px) {
+  .contactForm{
+    width: 80%;
+  }
+}
+
+.picture{
+  max-width: 100%;
+  height: auto;
+
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 2s;
+  filter: blur(8px);
+  transform: translateX(-100%);
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+.pics {
+  display: absolute;
+}
+
+.trans{
+  /* From https://css.glass */
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+width: 60%;
+margin: auto;
+}
+
+.trans2{
+  /* From https://css.glass */
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.41);
+backdrop-filter: blur(0px);
+-webkit-backdrop-filter: blur(0px);
+width: 60%;
+margin: auto;
+}
+
+.pics:nth-child(2) {
+  transition-delay: 200ms;
+}
+.pics:nth-child(3) {
+  transition-delay: 400ms;
+}
+.pics:nth-child(4) {
+  transition-delay: 600ms;
+}
+
+.footer-basic {
+  padding:40px 0;
+  color:#4b4c4d;
+}
+
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+.footer-basic li {
+  padding:0 10px;
+}
+
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-basic ul a:hover {
+  opacity:1;
+}
+
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:1px solid #ccc;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+
+.footer-basic .social > a:hover {
+  opacity:0.9;
+}
+
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:#aaa;
+  margin-bottom:0;
+}
+
+/* Add this code at the end of your styles.css file */
+
+/* Styles for active state of burger menu */
+.burger-menu.active .line:nth-child(1),
+.burger-menu.active .line:nth-child(5) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger-menu.active .line:nth-child(2),
+.burger-menu.active .line:nth-child(4) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+
+.burger-menu.active .line:nth-child(3) {
+  opacity: 0;
+}
+
+/* Styles for nav links in active state */
+.nav-links.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+}
+
+.nav-links.active li {
+  margin: 10px 20px;
+}
+
+.nav-links.active a {
+  font-size: 24px;
+  color: white;
+}
+
+/* Styles for nav links in desktop view */
+.nav-links li {
+  margin: 0 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000; /* Change color as per your preference */
+}
+
+
+.line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+}
